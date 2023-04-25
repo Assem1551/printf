@@ -19,6 +19,7 @@ int print_from_to(char *start, char *stop, char *except)
 	}
 	return (sum);
 }
+
 /**
  * print_rev - prints reversed string
  * @ap: string
@@ -41,6 +42,7 @@ int print_rev(va_list ap, params_t *params)
 	}
 	return (sum);
 }
+
 /**
  * print_rot13-prints string in rot13
  * @ap:string

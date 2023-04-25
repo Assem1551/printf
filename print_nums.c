@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _isdigit -  if character is digit
  * @c: character
@@ -8,6 +9,7 @@ int _isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
 }
+
 /**
  * _strlen - prints length of a string
  * @s: string
@@ -21,6 +23,7 @@ int _strlen(char *s)
 		i++;
 	return (i);
 }
+
 /**
  * print_number - prints a number
  * @str: p1
@@ -50,6 +53,7 @@ int print_number(char *str, params_t *params)
 	else
 		return (print_number_left_shift(str, params));
 }
+
 /**
  * print_number_right_shift - prints a number
  * @str: p1
@@ -90,6 +94,7 @@ int print_number_right_shift(char *str, params_t *params)
 	n += _puts(str);
 	return (n);
 }
+
 /**
  * print_number_left_shift - prints a number
  * @str: p1

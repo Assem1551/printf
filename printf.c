@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _printf-produces output according
  * @format: p1
@@ -27,9 +28,9 @@ int _printf(const char *format, ...)
 		}
 		start = p;
 		p++;
-		while (get_flag(p, &params))
+		while (get_flag(p, &params)) /* while char at p is flag char */
 		{
-			p++;
+			p++; /* next char */
 		}
 		p = get_width(p, &params, ap);
 		p = get_precision(p, &params, ap);

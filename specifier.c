@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * get_specifier- format func
  * @s:string
@@ -12,7 +13,7 @@ int (*get_specifier(char *s))(va_list ap, params_t *params)
 		{"i", print_int},
 		{"s", print_string},
 		{"%", print_percent},
-		{"b", print binary},
+		{"b", print_binary},
 		{"o", print_octal},
 		{"u", print_unsigned},
 		{"x", print_hex},
@@ -35,6 +36,7 @@ int (*get_specifier(char *s))(va_list ap, params_t *params)
 	}
 	return (NULL);
 }
+
 /**
  * get_print_func -finds format func
  *@s: fs
@@ -47,9 +49,7 @@ int get_print_func(char *s, va_list ap, params_t *params)
 	int (*f)(va_list, params_t *) = get_specifier(s);
 
 	if (f)
-	{
 		return (f(ap, params));
-	}
 	return (0);
 }
 
@@ -63,7 +63,7 @@ int get_flag(char *s, params_t *params)
 {
 	int i = 0;
 
-	switch (*S)
+	switch (*s)
 	{
 		case '+':
 			i = params->plus_flag = 1;
@@ -80,6 +80,28 @@ int get_flag(char *s, params_t *params)
 		case '0':
 			i = params->zero_flag = 1;
 			break;
+	}
+	return (i);
+}
+
+/**
+ * get_modifier - modifier func
+ * @s: f1
+ * @params: p1
+ * Return: int
+ */
+int get_modifier(char *s, params_t *params)
+{
+	int i = 0;
+
+	switch (*s)
+	{
+	case 'h':
+		i = params->h_modifier = 1;
+		break;
+	case 'l':
+		i = params->l_modifier = 1;
+		break;
 	}
 	return (i);
 }

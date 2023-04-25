@@ -18,6 +18,7 @@ int print_char(va_list ap, params_t *params)
 		sum += _putchar(ch);
 	return (sum);
 }
+
 /**
  * print_int - prints integer
  * @ap: arg p
@@ -36,6 +37,7 @@ int print_int(va_list ap, params_t *params)
 		l = (int)va_arg(ap, int);
 	return (print_number(convert(l, 10, 0, params), params));
 }
+
 /**
  * print_string - prints string
  * @ap: arg p
@@ -77,8 +79,6 @@ int print_string(va_list ap, params_t *params)
 	return (sum);
 }
 
-
-
 /**
  * print_percent - prints string
  * @ap: arg p
@@ -91,6 +91,7 @@ int print_percent(va_list ap, params_t *params)
 	(void)params;
 	return (_putchar('%'));
 }
+
 /**
  * print_S- format specifier
  * @ap: arg p
