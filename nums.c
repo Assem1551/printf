@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * convert - converter function
  * @num: number
@@ -55,8 +56,6 @@ int print_unsigned(va_list ap, params_t *params)
 	params->unsign = 1;
 	return (print_number(convert(l, 10, CONVERT_UNSIGNED, params), params));
 }
-
-
 
 /**
  * print_address - prints address

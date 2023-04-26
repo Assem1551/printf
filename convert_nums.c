@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * print_hex - prints hex numbers in lowercase
  * @ap: p1
@@ -27,6 +28,7 @@ int print_hex(va_list ap, params_t *params)
 	params->unsign = 1;
 	return (c += print_number(str, params));
 }
+
 /**
  * print_HEX - prints hex numbers in uppercase
  * @ap: p1
@@ -72,6 +74,7 @@ int print_binary(va_list ap, params_t *params)
 	params->unsign = 1;
 	return (c += print_number(str, params));
 }
+
 /**
  * print_octal - prints octal numbers
  * @ap: p1
