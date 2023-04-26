@@ -9,9 +9,7 @@ int _puts(char *str)
 	char *a = str;
 
 	while (*str)
-	{
 		_putchar(*str++);
-	}
 	return (str - a);
 }
 /**
@@ -31,8 +29,6 @@ int _putchar(int c)
 		i = 0;
 	}
 	if (c != BUF_FLUSH)
-	{
 		buf[i++] = c;
-	}
 	return (1);
 }

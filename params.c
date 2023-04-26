@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * init_params - clears struct fields
  * @params: p1
